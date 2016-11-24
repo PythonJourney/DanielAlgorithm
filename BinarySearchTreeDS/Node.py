@@ -35,7 +35,7 @@ class Node(object):
                 else:
                     tempNode = self.rightChild
 
-                parentNode = self.rightChild
+                parentNode.leftChild = tempNode
 
             elif parentNode.rightChild == self:
                 if self.leftChild is not None:
