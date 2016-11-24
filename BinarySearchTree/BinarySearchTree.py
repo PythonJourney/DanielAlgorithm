@@ -1,15 +1,11 @@
+from BinarySearchTree.Node import Node
 
-class Node(object):
+class BST(object):
 
-    def __init__(self, data):
-        self.data = data
-        self.leftChild = None
-        self.rightChild = None
+    def __init__(self):
+        self.rootNode = None;
 
     def insert(self, data):
-        if data < self.data:
-            if not self.leftChild:
-                self.leftChild = Node(data)
-            else:
-                self.leftChild.insert(data)
-                
+        if not self.rootNode:
+            self.rootNode = Node(data)
+        else:
